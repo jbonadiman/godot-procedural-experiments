@@ -1,0 +1,67 @@
+[gd_scene load_steps=3 format=3 uid="uid://burxi0yifeb6m"]
+
+[ext_resource type="PackedScene" uid="uid://bvv6o3su26kj8" path="res://nodes/experiments/experiment.tscn" id="1_sary2"]
+[ext_resource type="Script" path="res://nodes/experiments/seed_experiment.gd" id="2_3wvpm"]
+
+[node name="SeedExperiment" instance=ExtResource("1_sary2")]
+script = ExtResource("2_3wvpm")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." index="0"]
+offset_right = 233.0
+offset_bottom = 112.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer" index="0"]
+layout_mode = 2
+
+[node name="LineEdit" type="LineEdit" parent="VBoxContainer/HBoxContainer" index="0"]
+layout_mode = 2
+expand_to_text_length = true
+
+[node name="Button" type="Button" parent="VBoxContainer/HBoxContainer" index="1"]
+layout_mode = 2
+text = "randomise"
+
+[node name="GridContainer" type="GridContainer" parent="VBoxContainer" index="1"]
+layout_mode = 2
+size_flags_vertical = 4
+columns = 3
+
+[node name="Label1" type="Label" parent="VBoxContainer/GridContainer" index="0"]
+layout_mode = 2
+text = "number 1"
+
+[node name="Label2" type="Label" parent="VBoxContainer/GridContainer" index="1"]
+layout_mode = 2
+text = "number 2"
+
+[node name="Label3" type="Label" parent="VBoxContainer/GridContainer" index="2"]
+layout_mode = 2
+text = "number 3"
+
+[node name="Label4" type="Label" parent="VBoxContainer/GridContainer" index="3"]
+layout_mode = 2
+text = "number 4"
+
+[node name="Label5" type="Label" parent="VBoxContainer/GridContainer" index="4"]
+layout_mode = 2
+text = "number 5
+"
+
+[node name="Label6" type="Label" parent="VBoxContainer/GridContainer" index="5"]
+layout_mode = 2
+text = "number 6"
+
+[node name="Label7" type="Label" parent="VBoxContainer/GridContainer" index="6"]
+layout_mode = 2
+text = "number 7"
+
+[node name="Label8" type="Label" parent="VBoxContainer/GridContainer" index="7"]
+layout_mode = 2
+text = "number 8"
+
+[node name="Label9" type="Label" parent="VBoxContainer/GridContainer" index="8"]
+layout_mode = 2
+text = "number 9"
+
+[connection signal="text_changed" from="VBoxContainer/HBoxContainer/LineEdit" to="." method="_on_line_edit_text_changed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/Button" to="." method="_on_button_pressed"]
